@@ -1,0 +1,15 @@
+<!-- listAgency View -->
+<div ng-if="$parent.list_load_status == ''" class="listAgency">
+    <div class="panel panel-default" ng-animate="'animate'" ng-repeat="agency in $parent.agencies | orderBy:['grade']">
+        <div class="panel-heading">{{agency.name}}
+            <span class="tags">{{agency.tags}} </span>
+            <span class="label pull-right" ng-class="{'label-success':agency.grade=='1','label-warning':agency.grade=='2','label-danger':agency.grade=='3'}">{{agency.grade==1?'master':agency.grade==2?'jedi':'padawan'}}</span>
+        </div>
+        <div class="panel-body">
+            {{agency.description}}
+         </div>
+    </div>
+</div>
+<div class="alert alert-danger" role="alert" ng-if="$parent.list_load_status == 'error'">
+    Error in getting the data from the server
+</div>

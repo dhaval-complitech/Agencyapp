@@ -1,0 +1,44 @@
+<div class="panel panel-info addAgency">
+    <div class="panel-heading">
+        Add an agency
+    </div>
+    <form class="panel-body" name="formAdd" ng-submit="submit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" ng-model="agency.name" id="name" required name="name" class="form-control" placeholder="Name">
+            <i class="fa fa-lg fa-fw fa-exclamation-circle" ng-show="formAdd.name.$dirty && formAdd.name.$invalid" popover-trigger="mouseenter" popover-placement="left" popover="Please enter the name of agency"></i>
+            <i class="fa fa-lg fa-fw fa-check-circle" ng-show="formAdd.name.$valid"></i>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea rows="4" id="description" ng-model="agency.description" required name="description" class="form-control" placeholder="Description">
+            </textarea>
+            <i class="fa fa-lg fa-fw fa-exclamation-circle" ng-show="formAdd.description.$dirty && formAdd.description.$invalid" popover-trigger="mouseenter" popover-placement="left" popover="Please enter the description of agency"></i>
+            <i class="fa fa-lg fa-fw fa-check-circle" ng-show="formAdd.description.$valid"></i>
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags</label>
+            <tags-input ng-change="formAdd.tags.$dirty=true" min-tags="1" name="tags" ng-model="agency.tagsModel"></tags-input>
+            <i class="tags fa fa-lg fa-fw fa-exclamation-circle" ng-show="formAdd.description.$dirty && formAdd.tags.$invalid" popover-trigger="mouseenter" popover-placement="left" popover="Please enter the tags of agency"></i>
+            <i class="tags fa fa-lg fa-fw fa-check-circle" ng-show="formAdd.tags.$valid"></i>
+        </div>
+        <div class="form-group">
+            <label for="grade">Grade</label>
+            <select id="grade" selectpicker data-width="100%" ng-model="agency.grade">
+                <option value="1">master</option>
+                <option value="2">jedi</option>
+                <option value="3">padawan</option>
+            </select>
+        </div>
+        <button class="btn btn-info btn-block" type="submit" ng-disabled="add_status=='loading' || formAdd.$invalid ">
+            Add Agency
+            <span class="pull-right" ng-if="add_status=='loading'"><i class="fa fa-refresh loadicon"></i></span>
+        </button>
+        <div class="alert alert-danger" role="alert" ng-if="add_status == 'error'">
+            Error in adding new Agency
+        </div>
+        <div class="alert alert-success" role="alert" ng-if="add_status == 'success'">
+            New agency has been added successfully
+        </div>
+    </form>
+</div>

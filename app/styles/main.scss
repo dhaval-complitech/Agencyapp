@@ -1,0 +1,9 @@
+//main scss file
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "fontAwesome"; //font for the css path 
+@import "formOverride"; //form css override
+@import "listAgency"; //list of agency css
+@import "addAgency"; //list of agency css
+

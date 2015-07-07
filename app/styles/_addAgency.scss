@@ -1,0 +1,93 @@
+//scss file for settting the addAgency css
+.addAgency {
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(359deg);
+            -webkit-transform: rotate(359deg);
+            -ms-transform: rotate(359deg);
+            -moz-transform: rotate(359deg);
+            -o-transform: rotate(359deg)
+        }
+    }
+    @-webkit-keyframes rotate {
+        from {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(359deg);
+            -webkit-transform: rotate(359deg);
+            -ms-transform: rotate(359deg);
+            -moz-transform: rotate(359deg);
+            -o-transform: rotate(359deg)
+        }
+    }
+    @-ms-keyframes rotate {
+        from {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(359deg);
+            -webkit-transform: rotate(359deg);
+            -ms-transform: rotate(359deg);
+            -moz-transform: rotate(359deg);
+            -o-transform: rotate(359deg)
+        }
+    }
+    @-moz-keyframes rotate {
+        from {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(359deg);
+            -webkit-transform: rotate(359deg);
+            -ms-transform: rotate(359deg);
+            -moz-transform: rotate(359deg);
+            -o-transform: rotate(359deg)
+        }
+    }
+    @-o-keyframes rotate {
+        from {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(359deg);
+            -webkit-transform: rotate(359deg);
+            -ms-transform: rotate(359deg);
+            -moz-transform: rotate(359deg);
+            -o-transform: rotate(359deg)
+        }
+    }
+    .loadicon {
+        animation: rotate 0.7s infinite linear;
+        -webkit-animation: rotate 0.7s infinite linear;
+        -ms-animation: rotate 0.7s infinite linear;
+        -moz-animation: rotate 0.7s infinite linear;
+        -o-animation: rotate 0.7s infinite linear
+    }
+    .alert{
+        margin-top:10px; 
+    }
+}

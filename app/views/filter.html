@@ -1,0 +1,17 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Filter your agencies
+    </div>
+    <div class="panel-body" name="form" >
+        <form ng-submit="filterList()">
+            <div class="form-group">
+                <label for="nameFilter">Filter By Name</label>
+                <input type="text" ng-change="filterList()" ng-model="filter.name" required name="name" id="nameFilter" class="form-control" placeholder="Enter a name">
+            </div>
+            <div class="form-group">
+                <label for="tagFilter">Filter By Tags</label>
+                <tags-input on-tag-added="filterList()" on-tag-removed="filterList()" ng-model="filter.tagsModel"></tags-input>
+            </div>
+        </form>
+    </div>
+</div>
