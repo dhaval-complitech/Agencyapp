@@ -11,3 +11,12 @@ Agency application with angular and ruby for shortlist challange
 - Test cases are stored in test folder
 
 #setup steps for rails
+- First clone code by using "git clone https://github.com/dhaval-complitech/Agencyapp.git" from console
+- For databse setup - If postgres not already installed to your system, install postgres via following command if you are working on ubuntu.
+  sudo apt-get install libpq-dev
+  gem install pg
+- Change username and password for postgres in config/database.yml file
+- To create databse - rake db:create
+- Run migrate - rake db:migrate
+- To install gems - bundle install
+- Then start server run command - rails s
